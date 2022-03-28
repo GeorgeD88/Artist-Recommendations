@@ -9,7 +9,7 @@ The file accepts 0 to 2 arguments:
 - 0 args: uses default values
 - 1 args: uses same value for both number of popular songs and random songs
 - 2 args: uses first and second value for each value respectively
-```bash
+```s
 $ python3 recommend_artists.py
 $ python3 recommend_artists.py 3
 $ python3 recommend_artists.py 3 5
