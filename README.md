@@ -1,9 +1,9 @@
-# Music Recommendations
-This project consists of scripts each dedicated to recommending music in some way. Currently I only have a script for finding artist recommendations and creating a playlist out of them. In the future, I'd like to make a script leveraging the Last.FM API to recommend similar artists.
+# Artist Recommendations
+This project was a quick 2 hours speed code I did as a fun challenge for myself. What **Artist Recommendations** does is given some artists, it will grab each artist's top 3 songs and 3 random songs, and then creates a playlist out of the pulled songs.<br>
+*Unfortunately the screen recording only recorded audio for some reason :,(*
 
-## Artist Song Recommendations
-The `recommend_artists.py` script grabs each given artist's top 3 songs and 3 random songs, then creates a playlist out of the pulled songs.<br>
-*NOTE: you might end up with wrong artists if your entry doesn't come up first in spotify search results, so using links instead is advisable.*
+## Running the script
+Note before running, you might end up with wrong artists if your entry wouldn't come up first in Spotify search results, so using links instead is favorable.
 
 The file accepts 0 to 2 arguments:
 - 0 args: uses default values
