@@ -15,4 +15,7 @@ $ python3 recommend_artists.py 3
 $ python3 recommend_artists.py 3 5
 ```
 
-Once you run it, you will be asked which artists you'd like to be recommended from (through link or name) and then what you'd like to name the playlist. Once it finishes running, you'll have a new playlist
+Once you run it, you will be asked which artists you'd like to be recommended from (through link or name) and then what you'd like to name the playlist. Once it finishes running, you'll have a new playlist<br><br>
+**Below is an example run**<br>
+<img align="left" src="https://github.com/GeorgeD88/MusicRecommendations/blob/main/artist_recommendations_ex.png" alt="Genre Map" width="400">
+<img align="right" src="https://github.com/GeorgeD88/MusicRecommendations/blob/main/playlist_result.png" alt="Genre Map" width="400">
