@@ -36,9 +36,7 @@ else:
 
 # get artist names/links
 artist_names = []
-print('          ** NOTE: you might end up with wrong artists **')
-print('** if your entry doesn\'t come up first in spotify search results **')
-print('\nExact names or links of artists to recommend (enter nothing when finished):')
+print('Exact names or links of artists to recommend (enter nothing when finished):')
 input_name = input()
 while input_name != '':
     artist_names.append(input_name)

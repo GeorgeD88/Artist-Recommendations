@@ -3,6 +3,7 @@ This project consists of scripts each dedicated to recommending music in some wa
 
 ## Artist Song Recommendations
 The `recommend_artists.py` script grabs each given artist's top 3 songs and 3 random songs, then creates a playlist out of the pulled songs.
+*NOTE: you might end up with wrong artists if your entry doesn't come up first in spotify search results, so using links instead is advisable.*
 
 The file accepts 0 to 2 arguments:
 - 0 args: uses default values
@@ -14,4 +15,4 @@ $ python3 recommend_artists.py 3
 $ python3 recommend_artists.py 3 5
 ```
 
-Once you run it, you will be asked which artists you'd like to be recommended from and then what you'd like to name the playlist. Once it finishes running, you'll have a new playlist
+Once you run it, you will be asked which artists you'd like to be recommended from (through link or name) and then what you'd like to name the playlist. Once it finishes running, you'll have a new playlist
