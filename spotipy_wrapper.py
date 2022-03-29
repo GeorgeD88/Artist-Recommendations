@@ -1,4 +1,3 @@
-from ast import Index
 from spotipy.oauth2 import SpotifyOAuth
 from myutils import *
 import spotipy
