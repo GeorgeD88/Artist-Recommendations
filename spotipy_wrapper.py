@@ -95,46 +95,10 @@ class SpotipyWrapper:
 
     def new_playlist(self, playlist_name: str, public: bool = True, collaborative: bool = False, description: str = None):
         """ Creates new playlist with given name and returns playlist ID. """
-        return self.sp.user_playlist_create(self.my_id(), playlist_name, public=True, collaborative=False, description=description)['id']
+        return self.sp.user_playlist_create(self.my_id(), playlist_name, public=public, collaborative=collaborative, description=description)['id']
 
     def add_playlist_tracks(self, playlist_id: str, tracks: list):
         """ Adds list of tracks to given playlist. """
         tracks_chunks = divide_chunks(tracks, self.ADD_MAX)
         for chunk in tracks_chunks:
             self.sp.playlist_add_items(playlist_id, chunk)
-
-    # # SEARCH BASED (w/ wildcards)
-    # def artist_random_tracks(self, artist_id: str, amount: int = 1) -> str:
-    #     """ Returns random track from given artist. """
-    #     wildcard = random.choice(self.RANDOM_WILDCARDS)
-    #     results = self.sp.search(q=f'artist:{artist_id} track:{wildcard}', type='track', limit=amount)
-    #     """
-    #     track_ids = []
-    #     for track in results['tracks']:
-    #         track_ids.append(track['id'])
-    #     """
-    #     return results
-
-    # FAIL
-    ''' def search_artist(self, search_artist: str, limit: int = 1) -> dict:
-        """ Gets results from artist search query and returns JSON. """
-        search_artist = search_artist.lower()
-        results = self.sp.search(q='artist:' + search_artist, type='artist', limit=limit)
-        r_items = results['artists']['items']
-        if len(r_items) == 0:  # short circuits if no results
-            return None
-        else:
-            r_item = r_items[0]
-            a_name = r_item['name'].lower()
-        while a_name != search_artist:
-            print(a_name)
-            # if results exist, checks to page
-            if results['artists']['next'] is not None:
-                results = self.sp.next(results['artists'])
-                if len(results['artists']['items']) == 0:  # short circuits if no results
-                    return None
-                r_item = results['artists']['items'][0]
-                a_name = r_item['name'].lower()
-            else:
-                break
-        return r_item '''
